@@ -1,0 +1,70 @@
+{
+  "name": "hive",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://m-amaya.github.io/hive/",
+  "scripts": {
+    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "@types/jest": "24.0.11",
+    "@types/node": "11.13.6",
+    "@types/react": "16.8.14",
+    "@types/react-dom": "16.8.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "2.1.8",
+    "typescript": "3.4.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "gh-pages": "^2.0.1",
+    "prettier": "^1.17.0"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "endOfLine": "lf",
+    "htmlWhitespaceSensitivity": "css",
+    "jsxBracketSameLine": true,
+    "jsxSingleQuote": false,
+    "printWidth": 50,
+    "proseWrap": "always",
+    "quoteProps": "consistent",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended",
+      "plugin:react/recommended",
+      "prettier",
+      "prettier/react"
+    ],
+    "rules": {
+      "object-curly-newline": [
+        "error",
+        {
+          "multiline": true
+        }
+      ]
+    }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
