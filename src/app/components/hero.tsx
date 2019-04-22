@@ -23,7 +23,7 @@ const HeroText = () => (
 export const Hero = () => (
   <div className="parallax-container valign-wrapper">
     <div className="parallax">
-      <img src="/img/hive.jpg" />
+      <img src="https://m-amaya.github.io/hive/img/hive.jpg" />
     </div>
     <HeroText />
   </div>
