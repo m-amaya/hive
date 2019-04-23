@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "524b7a295726e9d4e310",
-    "url": "/hive/static/js/main.15d7fb7f.chunk.js"
+    "revision": "2056eb4e275e1f2121f8",
+    "url": "/hive/static/js/main.8e84175b.chunk.js"
   },
   {
     "revision": "216c00531dd0b8cc5268",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/hive/static/js/2.6146323e.chunk.js"
   },
   {
-    "revision": "91c3ad7245c717609271f4875e2021ae",
+    "revision": "45f390448e0ac0cc2d1425c1c522d9fe",
     "url": "/hive/index.html"
   }
 ];
