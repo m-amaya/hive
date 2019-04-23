@@ -15,6 +15,7 @@
     "@types/node": "11.13.6",
     "@types/react": "16.8.14",
     "@types/react-dom": "16.8.4",
+    "classnames": "^2.2.6",
     "materialize-css": "^1.0.0-rc.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
+    "@types/classnames": "^2.2.7",
     "@types/materialize-css": "^1.0.6",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",

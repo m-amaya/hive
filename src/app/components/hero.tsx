@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import {
-  Title,
-  Subtitle,
+  HeroH1,
+  HeroH2,
 } from '../styles/typography';
 
 const HeroText = () => (
@@ -10,12 +10,12 @@ const HeroText = () => (
     className="center-align"
     css={{ width: '100%' }}>
     <div>
-      <Title>The Hive</Title>
+      <HeroH1>The Hive</HeroH1>
     </div>
     <div>
-      <Subtitle>
+      <HeroH2>
         Central hub of awesome technologies.
-      </Subtitle>
+      </HeroH2>
     </div>
   </div>
 );
