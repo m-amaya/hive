@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { SFC } from 'react';
 import { Hero } from './components/hero';
 import { Sidebar } from './components/sidebar';
 import { Content } from './components/content';
 import { Footer } from './components/footer';
 
-export const App = () => (
+export const App: SFC = () => (
   <div>
     <Hero />
     <div
@@ -16,7 +17,7 @@ export const App = () => (
       <div className="col s12 m5 l4">
         <Sidebar />
       </div>
-      <div className="col s12 m7 l8">
+      <div className="col s12 m6 l7">
         <Content />
       </div>
     </div>

@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { SFC } from 'react';
 import { Collection } from './utils/collection';
 
 const TOPICS_LIST = [
@@ -24,10 +25,10 @@ const TOPICS_LIST = [
   'Utilities',
 ];
 
-export const Sidebar = () => (
+export const Sidebar: SFC = () => (
   <div
     className="container"
-    css={{ marginBottom: '50px' }}>
+    css={{ marginBottom: 50 }}>
     <Collection
       header="Topics"
       list={TOPICS_LIST}

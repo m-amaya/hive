@@ -1,6 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { SFC } from 'react';
+import { FilterBar } from './filter-bar';
 
-export const Content = () => (
-  <div className="container">content</div>
+export const Content: SFC = () => (
+  <div>
+    <FilterBar />
+  </div>
 );

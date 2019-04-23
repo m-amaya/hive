@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Props } from 'react';
-import cn from 'classnames';
+import { SFC } from 'react';
 
-export const HeroH1 = (props: Props<{}>) => (
+export const HeroH1: SFC = (props) => (
   <h1
     className="pink white-text z-depth-2"
     css={{
@@ -17,7 +16,7 @@ export const HeroH1 = (props: Props<{}>) => (
   </h1>
 );
 
-export const HeroH2 = (props: Props<{}>) => (
+export const HeroH2: SFC = (props) => (
   <h2
     className="white pink-text z-depth-2"
     css={{
@@ -31,7 +30,7 @@ export const HeroH2 = (props: Props<{}>) => (
   </h2>
 );
 
-export const Title = (props: Props<{}>) => (
+export const Title: SFC = (props) => (
   <div
     className="valign-wrapper"
     css={{
@@ -43,18 +42,8 @@ export const Title = (props: Props<{}>) => (
   </div>
 );
 
-interface ITextProps extends Props<{}> {
-  truncate?: boolean;
-}
-
-export const Text = (props: ITextProps) => {
-  const truncate = props.truncate ? true : false;
-
-  return (
-    <span
-      className={cn({ truncate })}
-      css={{ color: '#000', fontSize: 15 }}>
-      {props.children}
-    </span>
-  );
-};
+export const Text: SFC = (props) => (
+  <span css={{ color: '#000', fontSize: 15 }}>
+    {props.children}
+  </span>
+);

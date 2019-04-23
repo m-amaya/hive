@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Props } from 'react';
+import { SFC } from 'react';
+import { Dropdown } from './utils/dropdown';
 
-export const FilterBar = (props: Props<{}>) => (
-  <nav>
-    <div className="nav-wrapper">filter</div>
-  </nav>
+export const FilterBar: SFC = () => (
+  <div>
+    <Dropdown />
+  </div>
 );

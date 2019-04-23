@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { SFC } from 'react';
 
-export const Footer = () => (
+export const Footer: SFC = () => (
   <div>
     <ParallaxPanel />
     <footer className="page-footer teal lighten-1">
@@ -19,7 +20,7 @@ export const Footer = () => (
   </div>
 );
 
-const ParallaxPanel = () => (
+const ParallaxPanel: SFC = () => (
   <div
     className="parallax-container"
     css={{ height: 100 }}>

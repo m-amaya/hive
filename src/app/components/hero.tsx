@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { SFC } from 'react';
 import {
   HeroH1,
   HeroH2,
 } from '../styles/typography';
 
-const HeroText = () => (
+const HeroText: SFC = () => (
   <div
     className="center-align"
     css={{ width: '100%' }}>
@@ -20,7 +21,7 @@ const HeroText = () => (
   </div>
 );
 
-export const Hero = () => (
+export const Hero: SFC = () => (
   <div className="parallax-container valign-wrapper">
     <div className="parallax">
       <img src="https://m-amaya.github.io/hive/img/hive.jpg" />

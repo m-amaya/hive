@@ -1,17 +1,19 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Props } from 'react';
+import { SFC } from 'react';
 import {
   Title,
   Text,
 } from '../../styles/typography';
 
-interface IProps extends Props<{}> {
+interface ICollectionProps {
   header: string;
   list: string[];
 }
 
-export const Collection = (props: IProps) => (
+export const Collection: SFC<ICollectionProps> = (
+  props
+) => (
   <ul className="collection with-header">
     <li className="collection-header">
       <Title>{props.header}</Title>
@@ -24,9 +26,7 @@ export const Collection = (props: IProps) => (
   </ul>
 );
 
-export const CollectionItem = (
-  props: Props<{}>
-) => (
+export const CollectionItem: SFC = (props) => (
   <li
     className="collection-item"
     css={{
