@@ -24,7 +24,7 @@ const ParallaxPanel = () => (
     className="parallax-container"
     css={{ height: 100 }}>
     <div className="parallax">
-      <img src="https://m-amaya.github.io/hive/img/hive.jpg" />
+      <img src="https://m-amaya.github.io/hive/img/blossom.jpg" />
     </div>
   </div>
 );
