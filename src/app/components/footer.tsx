@@ -5,7 +5,7 @@ import { SFC } from 'react';
 export const Footer: SFC = () => (
   <div>
     <ParallaxPanel />
-    <footer className="page-footer teal lighten-1">
+    {/* <footer className="page-footer teal lighten-1">
       <div className="container">
         <div className="row">footer</div>
       </div>
@@ -16,14 +16,14 @@ export const Footer: SFC = () => (
           </span>
         </div>
       </div>
-    </footer>
+    </footer> */}
   </div>
 );
 
 const ParallaxPanel: SFC = () => (
   <div
     className="parallax-container"
-    css={{ height: 100 }}>
+    css={{ height: 200 }}>
     <div className="parallax">
       <img src="https://m-amaya.github.io/hive/img/blossom.jpg" />
     </div>

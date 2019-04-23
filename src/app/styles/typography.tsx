@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import styled from '@emotion/styled';
 import { SFC } from 'react';
 
 export const HeroH1: SFC = (props) => (
@@ -47,3 +48,9 @@ export const Text: SFC = (props) => (
     {props.children}
   </span>
 );
+
+export const Label = styled.div({
+  fontSize: 14,
+  fontWeight: 700,
+  textTransform: 'uppercase',
+});

@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import { SFC } from 'react';
 import {
-  Title,
+  Label,
   Text,
 } from '../../styles/typography';
 
@@ -16,7 +16,7 @@ export const Collection: SFC<ICollectionProps> = (
 ) => (
   <ul className="collection with-header">
     <li className="collection-header">
-      <Title>{props.header}</Title>
+      <Label>{props.header}</Label>
     </li>
     {props.list.map((item, i) => (
       <CollectionItem key={i}>
