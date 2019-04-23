@@ -3,13 +3,16 @@ import { jsx } from '@emotion/core';
 import { Hero } from './components/hero';
 import { Sidebar } from './components/sidebar';
 import { Content } from './components/content';
+import { Footer } from './components/footer';
 
 export const App = () => (
   <div>
     <Hero />
     <div
       className="row"
-      css={{ marginTop: '50px' }}>
+      css={{
+        paddingTop: 50,
+      }}>
       <div className="col s12 m5 l4">
         <Sidebar />
       </div>
@@ -17,5 +20,6 @@ export const App = () => (
         <Content />
       </div>
     </div>
+    <Footer />
   </div>
 );
