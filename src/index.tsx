@@ -1,27 +1,22 @@
 import 'materialize-css/dist/css/materialize.min.css';
-import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {
-  Parallax,
-  Dropdown,
-} from 'materialize-css';
+import { BrowserRouter } from 'react-router-dom';
+import makeInspectable from 'mobx-devtools-mst';
+import { Provider as StoreProvider } from 'mobx-react';
 import { App } from './app/app';
+import { Store } from './app/store';
 
-document.addEventListener(
-  'DOMContentLoaded',
-  () => {
-    Dropdown.init(
-      document.querySelectorAll(
-        '.dropdown-trigger'
-      )
-    );
-    Parallax.init(
-      document.querySelectorAll('.parallax')
-    );
-  }
-);
+/**
+ * Create store
+ */
+const store = Store.create({});
+makeInspectable(store);
 
 ReactDOM.render(
-  <App />,
+  <StoreProvider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StoreProvider>,
   document.getElementById('app')
 );

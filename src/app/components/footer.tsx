@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { SFC } from 'react';
+import { SFC, useEffect } from 'react';
+import { Parallax as MParallax } from 'materialize-css';
 
 export const Footer: SFC = () => (
   <div>
@@ -20,12 +21,20 @@ export const Footer: SFC = () => (
   </div>
 );
 
-const ParallaxPanel: SFC = () => (
-  <div
-    className="parallax-container"
-    css={{ height: 200 }}>
-    <div className="parallax">
-      <img src="https://m-amaya.github.io/hive/img/blossom.jpg" />
+const ParallaxPanel: SFC = () => {
+  useEffect(() => {
+    MParallax.init(
+      document.querySelectorAll('.parallax')
+    );
+  });
+
+  return (
+    <div
+      className="parallax-container"
+      css={{ height: 200 }}>
+      <div className="parallax">
+        <img src="https://m-amaya.github.io/hive/img/blossom.jpg" />
+      </div>
     </div>
-  </div>
-);
+  );
+};

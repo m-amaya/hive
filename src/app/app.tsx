@@ -1,13 +1,22 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { SFC } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import { Hero } from './components/hero';
 import { Sidebar } from './components/sidebar';
 import { Content } from './components/content';
 import { Footer } from './components/footer';
-import { SidePanel } from './components/side-panel';
 
 export const App: SFC = () => (
+  <div>
+    <Switch>
+      <Route path="/repo" component={RepoPage} />
+      <Route component={HomePage} />
+    </Switch>
+  </div>
+);
+
+const HomePage = () => (
   <div>
     <Hero />
     <div
@@ -25,6 +34,7 @@ export const App: SFC = () => (
       </div>
     </div>
     <Footer />
-    <SidePanel />
   </div>
 );
+
+const RepoPage = () => <div>repo details</div>;

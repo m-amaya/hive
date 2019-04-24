@@ -1,29 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { values } from 'ramda';
 import { SFC } from 'react';
 import { Collection } from './utils/collection';
-
-const TOPICS_LIST = [
-  'APIs',
-  'Backend',
-  'Charts & Graphs',
-  'CLI Apps',
-  'Clients',
-  'CSS',
-  'Data',
-  'Databases',
-  'DevOps',
-  'DevTools',
-  'Frameworks',
-  'JavaScript',
-  'Languages',
-  'Site Generators',
-  'Software',
-  'Templates',
-  'Testing',
-  'UI',
-  'Utilities',
-];
+import { TOPICS } from '../topics';
 
 export const Sidebar: SFC = () => (
   <div
@@ -31,7 +11,7 @@ export const Sidebar: SFC = () => (
     css={{ marginBottom: 50 }}>
     <Collection
       header="Topics"
-      list={TOPICS_LIST}
+      list={values(TOPICS)}
     />
   </div>
 );

@@ -1,21 +1,42 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { SFC, useState } from 'react';
+import { Dropdown as MDropdown } from 'materialize-css';
+import { keys } from 'ramda';
+import { SFC, useEffect, useState } from 'react';
 
-const DROPDOWN_LIST = [
-  'name',
-  'stars',
-  'release',
-  'owner',
-];
+interface IDropdownOptions {
+  name: string;
+  stars: string;
+  release: string;
+  owner: string;
+}
+
+const DROPDOWN_OPTIONS: IDropdownOptions = {
+  name: 'text_format',
+  stars: 'star',
+  release: 'today',
+  owner: 'face',
+};
+
+const DROPDOWN_LIST = keys(DROPDOWN_OPTIONS);
 
 export const Dropdown: SFC = () => {
   const [activeSort, setSort] = useState(
     DROPDOWN_LIST[0]
   );
 
-  const onClick = (selected: string) =>
-    setSort(selected);
+  const onClick = (
+    selected: keyof IDropdownOptions
+  ) => setSort(selected);
+
+  useEffect(() => {
+    MDropdown.init(
+      document.querySelectorAll(
+        '.dropdown-trigger'
+      ),
+      { constrainWidth: false }
+    );
+  });
 
   return (
     <div>
@@ -46,19 +67,22 @@ export const Dropdown: SFC = () => {
 
 export const DropdownItem: SFC<{
   index: number;
-  item: string;
-  onClick(selected: string): void;
+  item: keyof IDropdownOptions;
+  onClick(selected: keyof IDropdownOptions): void;
 }> = (props) => (
   <div>
     <li
       className="valign-wrapper"
       css={{
         height: 50,
-        padding: '0px 15px',
+        padding: '0px 20px 0 10px',
         textTransform: 'capitalize',
       }}
       tabIndex={props.index}
       onClick={(e) => props.onClick(props.item)}>
+      <i className="material-icons left">
+        {DROPDOWN_OPTIONS[props.item]}
+      </i>
       {props.item}
     </li>
     <li className="divider" tabIndex={-1} />

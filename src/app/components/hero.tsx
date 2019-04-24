@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { SFC } from 'react';
+import { SFC, useEffect } from 'react';
+import { Parallax as MParallax } from 'materialize-css';
 import {
   HeroH1,
   HeroH2,
@@ -21,11 +22,19 @@ const HeroText: SFC = () => (
   </div>
 );
 
-export const Hero: SFC = () => (
-  <div className="parallax-container valign-wrapper">
-    <div className="parallax">
-      <img src="https://m-amaya.github.io/hive/img/hive.jpg" />
+export const Hero: SFC = () => {
+  useEffect(() => {
+    MParallax.init(
+      document.querySelectorAll('.parallax')
+    );
+  });
+
+  return (
+    <div className="parallax-container valign-wrapper">
+      <div className="parallax">
+        <img src="https://m-amaya.github.io/hive/img/hive.jpg" />
+      </div>
+      <HeroText />
     </div>
-    <HeroText />
-  </div>
-);
+  );
+};

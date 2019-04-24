@@ -17,8 +17,13 @@
     "@types/react-dom": "16.8.4",
     "classnames": "^2.2.6",
     "materialize-css": "^1.0.0-rc.2",
+    "mobx": "^5.9.4",
+    "mobx-react": "^5.4.3",
+    "mobx-state-tree": "^3.14.0",
+    "ramda": "^0.26.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "typescript": "3.4.4"
   },
@@ -27,10 +32,14 @@
     "@emotion/styled": "^10.0.10",
     "@types/classnames": "^2.2.7",
     "@types/materialize-css": "^1.0.6",
+    "@types/mobx-devtools-mst": "^0.9.0",
+    "@types/ramda": "^0.26.8",
+    "@types/react-router-dom": "^4.3.2",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "gh-pages": "^2.0.1",
+    "mobx-devtools-mst": "^0.9.21",
     "prettier": "^1.17.0"
   },
   "prettier": {
