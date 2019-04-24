@@ -31,17 +31,12 @@ export const HeroH2: SFC = (props) => (
   </h2>
 );
 
-export const Title: SFC = (props) => (
-  <div
-    className="valign-wrapper"
-    css={{
-      fontSize: 25,
-      fontWeight: 700,
-      height: 50,
-    }}>
-    {props.children}
-  </div>
-);
+export const Title = styled.div({
+  display: 'inline-flex',
+  fontSize: 20,
+  fontWeight: 700,
+  marginBottom: 10,
+});
 
 export const Text: SFC = (props) => (
   <span css={{ color: '#000', fontSize: 15 }}>
@@ -53,4 +48,14 @@ export const Label = styled.div({
   fontSize: 14,
   fontWeight: 700,
   textTransform: 'uppercase',
+});
+
+export const Tag: SFC = styled.span({
+  backgroundColor: '#009688',
+  borderRadius: 9,
+  color: '#fff',
+  fontSize: 12,
+  fontWeight: 300,
+  marginRight: 5,
+  padding: '2px 8px',
 });

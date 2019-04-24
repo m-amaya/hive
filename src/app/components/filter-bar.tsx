@@ -6,14 +6,11 @@ import { Dropdown } from './utils/dropdown';
 import { Title } from '../styles/typography';
 
 export const FilterBar: SFC = () => (
-  <div
-    className="valign-wrapper"
-    css={{ justifyContent: 'space-between' }}>
-    <div>
-      <Title>Technologies</Title>
-    </div>
-    <div className="valign-wrapper">
+  <div className="row valign-wrapper">
+    <div className="col s8">
       <Input />
+    </div>
+    <div className="col s4 right-align">
       <Dropdown />
     </div>
   </div>
